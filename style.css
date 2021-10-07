@@ -1,0 +1,210 @@
+body, h1, h2, p, ul, li, a {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(58, 34, 18);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.menu-bg{
+    background: #fed588;
+}
+
+.menu{
+    max-width: 960px;  
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a{
+    color:rgb(58, 34, 18);
+}
+
+.menu-logo a{
+    font-size: 2.25em;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.menu-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-nav a{
+    font-size: 1.25em;
+    display: block;
+    padding: 10px;
+}
+
+.menu-nav a:hover {
+    color: #ee4949;
+}
+
+.sobre{
+    /* border-top: 2px solid  #ee4949; */
+    border-bottom: 2px solid #ee4949;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sobre-info{
+    flex: 2 1 360px;
+    margin: 0 10px;
+}
+
+.sobre-info h1{
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+
+.sobre-info p{
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    color: rgb(58, 34, 18);
+}
+
+.sobre-img{
+    flex: 1 1 160px;
+    margin: 10px;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.cardapio{
+    max-width: 960px;
+    margin: 60px auto;
+}
+
+.cardapio h1 {
+    font-size: 3em;
+    margin: 0 10px 60px 10px;
+    
+}
+.cardapio p {
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    color: rgb(58, 34, 18);
+}
+
+.cardapio-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-end;
+}
+
+.cardapio-item {
+    flex: 1 1 175px;
+    margin: 10px;
+}
+
+.cardapio-item h2 {
+    font-size: 3em;
+    color: rgb(58, 34, 18);
+    background: #fed588; 
+    padding: 60px 20px;
+}
+.assados {
+    border-top: 8px solid #ee4949;
+}
+
+.fritos {
+    border-top: 8px solid #ee4949;
+}
+
+.cento {
+    border-top: 8px solid #ee4949;
+}
+
+.download{
+    border-top: 8px solid #ee4949;
+    align-items: center;
+}
+
+.contato {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    border-top: 2px solid #ee4949;
+}
+
+
+.contato-info{
+    flex: 1 1 260px;
+    margin: 0 10px;
+    flex-wrap: wrap;
+}
+
+.contato-info h1{
+    font-size: 3em;
+    color:rgb(58, 34, 18)
+}
+
+.contato-info p{
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    font-style: italic;
+    max-width: 230px ;
+    color:rgb(53, 38, 28);
+}
+
+.contato-contatos{
+    flex: 1 1 175px;
+    margin: 10px;
+}
+
+.contato-insta{
+    flex: 2 1 260px;
+}
+
+
+.footer-bg{
+    background: #ee4949;
+}
+
+.footer{
+    max-width: 960px;  
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p{
+    font-style: bold;
+}

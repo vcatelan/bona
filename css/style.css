@@ -109,6 +109,7 @@ img {
     margin: 0 10px 60px 10px;
     
 }
+
 .cardapio p {
     font-size: 1.25em;
     line-height: 1.4;
@@ -133,6 +134,15 @@ img {
     background: #fed588; 
     padding: 60px 20px;
 }
+
+.cardapio-item a{
+    color: rgb(58, 34, 18);;
+}
+
+.cardapio-item a:hover {
+    color: #ee4949;
+}
+
 .assados {
     border-top: 8px solid #ee4949;
 }
@@ -143,11 +153,23 @@ img {
 
 .cento {
     border-top: 8px solid #ee4949;
+
 }
 
 .download{
     border-top: 8px solid #ee4949;
     align-items: center;
+}
+
+.cardapio-container{
+    display: flex;
+    width: 100%;
+    flex: auto;
+}
+
+.contato-container{
+    display: flex;
+    flex-grow: 1;
 }
 
 .contato {
@@ -159,7 +181,6 @@ img {
     padding-top: 10px;
     border-top: 2px solid #ee4949;
 }
-
 
 .contato-info{
     flex: 1 1 260px;
@@ -182,14 +203,23 @@ img {
 }
 
 .contato-contatos{
-    flex: 1 1 175px;
+    display: flex;
+    width: 100%;
+    flex: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
     margin: 10px;
 }
 
-.contato-insta{
-    flex: 2 1 260px;
+.contato-contatos a{
+    margin-top: 30px;
+    color: #ee4949;
 }
 
+.contato-insta{
+    height: 70px;
+}
 
 .footer-bg{
     background: #ee4949;

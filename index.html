@@ -1,82 +1,331 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shirink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Biblioteca de ícones Font Awesome -->
     <link rel="icon" href="./img/bonap.png">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <title>Bona Salgados</title>
+
+<style>
+/* Mobile-First Styles */
+    @media (min-width: 768px) {
+        /* Apenas estilos adicionais para dispositivos maiores aqui, se necessário */
+        .section-content {
+            flex-direction: row; /* Volte à ordem original para dispositivos maiores */
+        }
+    }
+
+/*FONT-STYLE-START  */
+    h1, h2, h3, h4{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: #3A2212;
+        font-size: 42px;
+        font-weight: 600;
+        line-height: 3.5rem;
+    }
+    p{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #3A2212;
+        font-size: 22px;
+        line-height: 1.7rem;
+    }
+    a{
+        color: #ee4949!important;
+        font-size: 1.5rem; 
+        text-decoration: none; 
+    }
+    a:hover{
+        color:#3A2212!important;;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+/*FONT-STYLE-START  */
+
+/* CSS-STYLE-START */
+    /* 1-LOGO-&-LINK-HEADER-START */
+    .header-centralized {
+        background-color: #f8f9fa;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .logo-centralized {
+        max-width: 200px;
+        display: block;
+        margin: 0 auto; /* Centralizar a imagem horizontalmente */
+    }
+    .logo-img{
+        width: 80px;
+    }
+    #header-module{
+        background-color: #fed588;
+    }
+    /* 1-LOGO-&-LINK-HEADER-END */
+
+    /* 2-TEXT-IMAGE-START */
+    .text-image {
+        padding: 100px 0;
+        text-align: center;
+    }
+    .text-image-content {
+        display: flex;
+        align-items: center;
+        text-align: left; /* Alinhar o texto à esquerda em dispositivos maiores */
+        border-bottom: 1px solid #ee4949;
+    }
+    .text-image-text {
+        flex: 1;
+        padding: 20px;
+    }
+    .text-image-text h2 {
+        margin-bottom: 20px;
+    }
+    .text-image-image {
+        flex: 1;
+        padding: 20px;
+    }
+    .bona-text-logo{
+        width: 450px;
+    }
+    /* 2-TEXT-IMAGE-END */
+
+    /* 4-MENU-START */
+    .quote-section {
+        padding: 50px 0;
+        text-align: left;
+        margin: 0 20px;
+    }
+    .quote-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .quote {
+        flex: 1;
+        margin: 10px;
+        /* padding: 20px; */
+        text-align: center;
+        background-color: #fed588;
+        border-top: 10px solid #ee4949;
+    }
+    .quote img {
+        max-width: 100%;
+    }
+    .quote h3 {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .quote p {
+        font-size: 16px;
+    }
+    .menu-section{
+        border-bottom: 1px solid #ee4949;
+    }
+    /* 4-MENU-END  */
+
+    /* 5-ONTACT-START */
+    .standart-btn {
+        color: #fed588;
+        background-color: #ee4949;
+        border-color: #ee4949;
+    }
+    /* 5-CONTACT-END */
+
+    /* 6-FOOTER-START */
+    .footer {
+        background-color: #ee4949;
+        color: #fed588;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .footer-links {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .social-icons {
+        display: inline-block;
+    }
+    .social-icons i {
+        font-size: 30px;
+        margin-right: 10px;
+        color: #fed588;
+    }
+    /* 6-FOOTER-END */
+/* CSS-STYLE-END */
+</style>
 </head>
 <body>
+<!-- 1-LOGO-&-LINK-HEADER-START -->
+    <section id="header-module">
+        <div class="header">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a href="#header-module"><img class="logo-img" src="./img/bonap.png" alt="Logo da Empresa" class="logo"></a>
 
-    <header class="menu-bg">
-        <div class="menu">
-            <div class="menu-logo">
-                <a href="">Bona Salgados</a>
-            </div>
-            <nav class="menu-nav js-menu">
-                <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#cardapio">Cardápio</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
+                    <!-- Botão do Menu Responsivo (Hamburguer) -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Itens do Menu -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="link-color nav-link scroll" data-target="#text-image-module" href="#text-image-module">Sobre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="link-color nav-link scroll" data-target="#menu-module" href="#menu-module">Cardápio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="link-color nav-link scroll" data-target="#contact-module" href="#contact-module">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
-    </header>
-
-    <section class="sobre js-scroll" id="sobre">
-        <div class="sobre-info">
-            <h1>A Bona Salgados</h1>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        </div>
-        <div class="sobre-img">
-            <img src="./img/bona.PNG" alt="Bona-Logo">
-        </div>
     </section>
+<!-- 1-LOGO-&-LINK-HEADER-END -->
 
-    <section class="cardapio js-scroll" id="cardapio">
-        <h1>Cardápio</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        <div class="cardapio-container">
-            <div class="cardapio-item assados">
-                <h2>Assados</h2>
-                <img src="./img/assado.jpg" alt="assados">
-            </div>
-            <div class="cardapio-item fritos">
-                <h2>Fritos</h2>
-                <img src="./img/frito.jpg" alt="fritos">
-            </div>
-            <div class="cardapio-item cento">
-                <h2>Cento</h2>
-                <img src="./img/cento.jpg" alt="cento">
-            </div>
-        </div>
-        <div class="cardapio-item download">
-            <h2><a href="./img/Bona Salgados.pdf" download="Bona Salgados.pdf">Baixe aqui nosso cardápio</a></h2>
-        </div>
-    </section>
-
-    <section class="contato js-scroll" id="contato">
-        <div class="contato-container">
-            <div class="contato-info">
-                <h1>Contato</h1>
-                <p>Ficou alguma dúvida? Acesse nossas redes ou entre em contato para mais informações!</p>
-            </div>
-            <div class="contato-contatos">
-                <a href="mailto:bonasalgados@gmail?Subject=Título%20da%20mensagem">bonasalgados@gmail.com</a>
-                <a href="tel:+5511999999999">+55 11 999-999-999</a>
-                <a href="https://www.instagram.com/bona_salgados/"target="_blank"><img class="contato-insta" src="./img/Logo-do-Instagram-PNG.png"></a>
+<!-- 2-TEXT-IMAGE-START -->
+    <section id="text-image-module" >
+        <div class="text-image">
+            <div class="container">
+                <div class="row text-image-content">
+                    <div class="col-md-6 text-image-text">
+                        <h2>Bona Salgados: Sabores Artesanais com Coração</h2>
+                        <p>
+                            Bona Salgados é o fruto da paixão de duas irmãs pela culinária artesanal, oferecendo uma experiência gastronômica única. Com ingredientes frescos e tradição familiar, cada salgado é criado com amor, garantindo sabores autênticos e livres de conservantes. Seja para um lanche rápido ou ocasiões especiais, a Bona Salgados convida você a explorar seu cardápio diversificado, onde tradição e qualidade se encontram. Junte-se a nós nesta jornada de sabor e tradição que celebra a autenticidade dos salgados artesanais.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-image-image">
+                        <img class="bona-text-logo" src="./img/bona.PNG" alt="Imagem à Direita">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+<!-- 2-TEXT-IMAGE-END -->
 
-    <section class="footer-bg">
-        <footer class="footer">
-            <p> BONA SALGADOS ® - TODOS OS DIREITOS RESERVADOS</p>
-        </footer>
+<!-- 4-MENU-START -->
+    <section id="menu-module">
+        <div class="quote-section">
+            <div class="container">
+                <div class="row">
+                    <div class="text-and-quote-section">
+                            <div class="text-block">
+                                <h2>Cardápio</h2>
+                                <p>
+                                    Dê asas à sua curiosidade gastronômica com o nosso variado cardápio. Na nossa seleção, você encontrará uma sinfonia de sabores que abraça tanto o tradicional quanto o inovador. Cada prato é meticulosamente elaborado, destacando os ingredientes frescos e o toque artesanal que é a marca registrada da nossa cozinha. Explore nosso cardápio para encontrar a combinação perfeita para qualquer ocasião e satisfaça seu paladar com as delícias que preparamos com carinho. Na Bona Salgados, a variedade é a chave para uma experiência única de sabor.
+                                </p>
+                            </div>
+                    </div>
+                    <div class="menu-section col-md-12">
+                        <div class="quote-container">
+                            <div class="quote">
+                                <h3>ASSADOS</h3>
+                                <img src="./img/assado.jpg" alt="Citação 1">
+                            </div>
+                            <div class="quote">
+                                <h3>FRITOS</h3>
+                                <img src="./img/frito.jpg" alt="Citação 2">
+                            </div>
+                            <div class="quote">
+                                <h3>CENTO</h3>
+                                <img src="./img/cento.jpg" alt="Citação 3">
+                            </div>
+                        </div>
+                        <div class="quote">
+                            <h3><a href="./img/Bona Salgados.pdf" download="Bona Salgados.pdf">BAIXE AQUI NOSSO CARDÁPIO</h3></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+<!-- 4-MENU-END -->
 
-<script src="./js/scroll.js"></script>
+<!-- 5-CONTACT-START -->
+    <section id="contact-module">
+        <div class="contact-section">
+            <div class="container mb-5">
+                <h2>Entre em Contato Conosco</h2>
+                <p>
+                    Agradecemos por escolher a Bona Salgados e esperamos ansiosamente pelo seu contato para tornar sua experiência conosco ainda mais especial.
+                </p>
+                <div class="contact-form">
+                    <form action="#" method="post">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Telefone">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn standart-btn">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--5-CONTACT-END -->
+
+<!-- 6-FOOTER-START -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <p>
+                    BONA SALGADOS ® - TODOS OS DIREITOS RESERVADOS
+                </p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/bona_salgados/" target="_blank"><i class="mx-3 fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/bona_salgados/" target="_blank"><i class="mx-3 fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+<!-- 6-FOOTER-END -->
+
+<!-- JAVA-SCRIPT-START -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll(".scroll");
+    
+            links.forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+    
+                    const targetId = this.getAttribute("data-target");
+                    const targetElement = document.querySelector(targetId);
+    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: "smooth" // Rola suavemente
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+<!-- JAVA-SCRIPT-END -->
+
 </body>
-</html>
